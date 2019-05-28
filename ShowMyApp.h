@@ -10,13 +10,17 @@
 #import "ShowMyAppRequestURL.h"
 #import "ShowMyAppRequestQRCode.h"
 
-@interface ShowMyApp : NSObject <NSSharingServicePickerDelegate>{
+@interface ShowMyApp : NSObject <NSSharingServicePickerDelegate> {
+    NSString *Message;
     NSString *AppName; // &n=xxxxx
     NSInteger Design; // &d=xxxxx
     NSColor *DesignColor; // &c=#XXXXXX
     NSColor *DesignColorBackground; // &k=#XXXXXX
     bool tiny; // &t=0/1
     bool oneIconOnly; // &i=0/1
+    
+    bool ReferencedUser;
+    NSString *ReccordID; // &r=#XXXXXX
     
     NSString *iOS_iPhone_BundleID; // &a=xxxxx
     NSString *iOS_iPad_BundleID; // &b=xxxxx
@@ -52,6 +56,9 @@
 @property (nonatomic) bool tiny;
 @property (nonatomic) bool oneIconOnly;
 
+@property (nonatomic) bool ReferencedUser;
+@property (nonatomic, strong) NSString *ReccordID;
+
 @property (nonatomic, strong) NSString *iOS_iPhone_BundleID;
 @property (nonatomic, strong) NSString *iOS_iPad_BundleID;
 @property (nonatomic, strong) NSString *macOS_BundleID;
@@ -83,9 +90,9 @@
 -(void)InsertFullQRCode:(NSImageView *)sImageView;
 -(void)InsertTinyQRCode:(NSImageView *)sImageView;
 
--(void)Share:(NSView *)sView Message:(NSString*) sMessage;
--(void)ShareFull:(NSView *)sView Message:(NSString*) sMessage;
--(void)ShareTiny:(NSView *)sView Message:(NSString*) sMessage;
+-(void)Share:(NSView *)sView;
+-(void)ShareFull:(NSView *)sView;
+-(void)ShareTiny:(NSView *)sView;
 
 -(void)ShareFullQRCode:(NSView *)sView;
 -(void)ShareTinyQRCode:(NSView *)sView;

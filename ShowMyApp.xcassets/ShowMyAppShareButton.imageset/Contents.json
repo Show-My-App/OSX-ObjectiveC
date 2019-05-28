@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "ShowMyAppWhiteIcon-1.png",
+      "filename" : "ShowMyAppShareButton .png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ShowMyAppWhiteIcon.png",
+      "filename" : "ShowMyAppShareButton -1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "ShowMyAppWhiteIcon-2.png",
+      "filename" : "ShowMyAppShareButton -2.png",
       "scale" : "3x"
     }
   ],

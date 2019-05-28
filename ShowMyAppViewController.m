@@ -26,7 +26,7 @@
 }
 -(IBAction)Share:(id)sSender {
     NSLog(@" %s line %d",__FUNCTION__, __LINE__);
-    [ShowMyAppInstalled Share:sSender Message:@"Try this app"];
+    [ShowMyAppInstalled Share:sSender];
 }
 
 @end
